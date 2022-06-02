@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./baglanti.js"></script>
+    <title>Sinema Rezervasyon </title>
+</head>
+<input type="submit" id="salonlar" value="Salonlar">
+<input type="submit" id="rezervasyonInp" value="Rezervasyon Yap">
+<hr>
+<div id="salonListele"></div>
+<div id="salonEkle">
+    <input type="text" id="salonAdi" placeholder="Salon Adı girin">
+    <input type="submit" id="salonEkle" value="Salon Ekle">
+</div>
+<div id="rezervasyon"></div>
+<div id="bilgiGir"></div>
+<script>
+    document.getElementById("salonlar").addEventListener("click", (event) => {
+        event.preventDefault();
+        salonlariListele();
+    })
+    document.getElementById("salonEkle").addEventListener("click", (event) => {
+        event.preventDefault();
+        let salonAdi = document.getElementById("salonAdi").value;
+        salonOlustur(salonAdi);
+    })
+    document.getElementById("rezervasyonInp").addEventListener("click", (event) => {
+        event.preventDefault();
+        rezervasyonListe();
+
+    })
+
+</script>
+
+<body>
+
+</body>
+
+</html>
